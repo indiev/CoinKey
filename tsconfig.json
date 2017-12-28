@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "outDir": "./build/dist",
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "importHelpers": true,
+    "listFiles": false,
+    "traceResolution": false,
+    "pretty": true,
+    "lib": [
+      "es6"
+    ],
+    "types": [
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/types/*"
+      ]
+    },
+    "allowJs": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+  },
+  "exclude": [
+    "node_modules/*",
+    "build"
+  ],
+  "compileOnSave": false
+}

@@ -1,0 +1,72 @@
+{
+  "name": "package",
+  "version": "0.1.0",
+  "description": "BlockChain Trader Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build  && babel-node build/dist/index.js",
+    "build": "npm run build-ts && npm run tslint",
+    "watch-node": "nodemon build/dist/index.js",
+    "test": "jest --forceExit",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indievelop/CoinKey"
+  },
+  "keywords": [
+    "Coin",
+    "BlockChain",
+    "Trader"
+  ],
+  "author": "Indieveloper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indievelop/CoinKey/issues"
+  },
+  "homepage": "https://github.com/indievelop/CoinKey#readme",
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx|js|jsx)$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/test/**/*.test.(ts|js)"
+    ],
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "awesome-typescript-loader": "^3.4.1",
+    "lodash": "^4.17.4",
+    "ts-loader": "^3.2.0",
+    "tslint-loader": "^3.5.3",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.46",
+    "@types/jest": "^21.1.10",
+    "@types/lodash": "^4.14.91",
+    "@types/node": "^8.5.2",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^22.0.4",
+    "nodemon": "^1.14.3",
+    "source-map-loader": "^0.2.3",
+    "ts-jest": "^22.0.0",
+    "tslint": "^5.8.0",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.6.2"
+  }
+}
